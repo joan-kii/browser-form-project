@@ -7,29 +7,29 @@
   <title>Browser Form</title>
 </head>
 <body>
-  <div class="formContainer">
+  <div id="formContainer" class="formContainer">
 
-    <form>
+    <form novalidate>
       <label for="email">Email:</label><br>
-      <input type="email" id="email"><br>
+      <input type="email" name="email" id="email" placeholder="ejemplo@email.com" required><br>
 
       <label for="pais">País:</label><br>
-      <input type="country" id="country"><br>
+      <input type="country" id="country" placeholder="España" pattern="[a-zA-Z]+"required><br>
 
       <label for="zip">Código Postal:</label><br>
-      <input type="text" id="zip" pattern="[0-9]*"><br>
+      <input type="text" id="zip" pattern="[0-9]+" placeholder="12345" maxlength="5" required><br>
 
       <label for="password">Contraseña:</label><br>
-      <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+      <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
 
       <label for="passwordConf">Confirmación Contraseña:</label><br>
-      <input type="password" id="passwordConf"><br>
+      <input type="password" id="passwordConf" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
 
       <button type="submit" id="submit">Enviar</button>
     </form>
 
   </div>
-  <div class="confMessage">
+  <div id="confMessage" class="confMessage">
       <p>¡Bien! ¡Todo ha ido sobre ruedas!</p>
   </div>  
   <script src="script.js"></script>

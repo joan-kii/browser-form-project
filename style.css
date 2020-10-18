@@ -11,7 +11,7 @@ body {
   box-sizing: inherit;
 }
 
-.formContainer {
+.formContainer, .confMessage {
   margin: 5% 20%;
   background-color: lightgray;
   border-radius: 1.5em;
@@ -32,12 +32,12 @@ input {
 
 input:invalid {
   outline: none;
-  background-color: lightcoral;
+  background-color: rgb(255, 204, 204);
 }
 
 input:valid {
   outline: none;
-  background-color: lightgreen;
+  background-color: rgb(190, 255, 190);
 }
 
 button {
